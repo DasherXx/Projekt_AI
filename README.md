@@ -1,5 +1,7 @@
-1.Projekt_AI
-„Klasyfikator parzystości oparty na sieci neuronowej”. Wyjaśnij krótko cel: program uczy się rozpoznawać regułę logiczną (co najmniej dwie liczby parzyste z trzech podanych).
+1.Projekt
+
+„Klasyfikator parzystości oparty na sieci neuronowej”.
+Cel: program uczy się rozpoznawać regułę logiczną (co najmniej dwie liczby parzyste z trzech podanych).
 
 2.Architektura sieci (Struktura)
 
