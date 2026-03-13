@@ -41,5 +41,24 @@ int main() {
 
         int licznik_parzystych = (int)x[0] + (int)x[1] + (int)x[2];
         double target = (licznik_parzystych >= 2) ? 1.0 : 0.0;
+
+        double hidden[4];
+        for (int j = 0; j < 4; j++) {
+            double suma = 0;
+            for (int i = 0; i < 3; i++) suma += x[i] * wagi_wejscie[i][j];
+            hidden[j] = sigmoid(suma);
+
+        double output = 0;
+        for (int j = 0; j < 4; j++) output += hidden[j] * wagi_wyjscie[j];
+        output = sigmoid(output);
+        
+        double error = target - output;
+        double delta_output = error * sigmoid_pochodna(output);
+
+        double delta_hidden[4];
+        for (int j = 0; j < 4; j++)
+            delta_hidden[j] = delta_output * wagi_wyjscie[j] * sigmoid_pochodna(hidden[j]);
+
+        
     }
 }
